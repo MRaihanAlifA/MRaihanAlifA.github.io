@@ -14,7 +14,6 @@ const scoreDiv = document.getElementById("scoreContainer");
 let questions = [
     {
         question : "Apa simbol kimia untuk perak?",
-        // imgSrc : ".\picture\soal01.PNG",
         choiceA : "AG",
         choiceB : "Co2",
         choiceC : "H2O",
@@ -22,7 +21,6 @@ let questions = [
         correct : "A"
     },{
         question : "berapa lama capung rata rata bertahan hidup?",
-        // imgSrc : ".\picture\soal02.PNG",
         choiceA : "2 hari",
         choiceB : "2 bulan",
         choiceC : "1 bulan",
@@ -30,7 +28,6 @@ let questions = [
         correct : "D"
     },{
         question : "Berapa banyak hati yang dimiliki oleh Gurita?",
-        // imgSrc : ".\picture\soal03.PNG",
         choiceA : "1",
         choiceB : "2",
         choiceC : "3",
@@ -39,7 +36,6 @@ let questions = [
     },
     {
         question : "Klub mana yang memenangkan final Piala FA 1986",
-        // imgSrc : ".\picture\soal04.PNG",
         choiceA : "Liverpool",
         choiceB : "Arsenal",
         choiceC : "M.United",
@@ -47,12 +43,11 @@ let questions = [
         correct : "A"
     },
     {
-        question : "Klub mana yang memenangkan final Piala FA 1986",
-        // imgSrc : ".\picture\soal04.PNG",
-        choiceA : "Liverpool",
-        choiceB : "Arsenal",
-        choiceC : "M.United",
-        choiceD : "Chelsea",
+        question : "pada tahun berapa akhir dari Perang Dunia Pertama?",
+        choiceA : "1918",
+        choiceB : "1920",
+        choiceC : "1909",
+        choiceD : "1915",
         correct : "A"
     }
 ];
@@ -70,7 +65,6 @@ function renderQuestion(){
     let q = questions[runningQuestion];
     
     question.innerHTML = "<p>"+ q.question +"</p>";
-    // qImg.innerHTML = `<img src="${q.imgSrc}" >`;;
     choiceA.innerHTML = q.choiceA;
     choiceB.innerHTML = q.choiceB;
     choiceC.innerHTML = q.choiceC;
@@ -86,13 +80,13 @@ function startQuiz(){
     renderCounter();
     TIMER = setInterval(renderCounter,1000); 
 }
-// render progress
+// munculkan progress
 function renderProgress(){
     for(let qIndex = 0; qIndex <= lastQuestion; qIndex++){
         progress.innerHTML += "<div class='prog' id="+ qIndex +"></div>";
     }
 }
-// counter render
+// munculkan counter waktu
 function renderCounter(){
     if(count <= questionTime){
         counter.innerHTML = count;
