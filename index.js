@@ -1,7 +1,6 @@
 const start = document.getElementById("start");
 const quiz = document.getElementById("quiz");
 const question = document.getElementById("question");
-const qImg = document.getElementById("qImg");
 const choiceA = document.getElementById("A");
 const choiceB = document.getElementById("B");
 const choiceC = document.getElementById("C");
@@ -49,13 +48,54 @@ let questions = [
         choiceC : "1909",
         choiceD : "1915",
         correct : "A"
+    },
+    {
+        question : "pada tahun berapa didirikannya komunis di china?",
+        choiceA : "1943",
+        choiceB : "1945",
+        choiceC : "1949",
+        choiceD : "1950",
+        correct : "C"
+    },
+    {
+        question : "pada tahun berapa akhir dari Perang Dunia kedua?",
+        choiceA : "1943",
+        choiceB : "1945",
+        choiceC : "1949",
+        choiceD : "1950",
+        correct : "B"
+    },
+    {
+        question : "Planet terdekat dengan matahari adalah ….",
+        choiceA : "Venus",
+        choiceB : "Merkurius",
+        choiceC : "Jupiter",
+        choiceD : "Mars",
+        correct : "B"
+    },
+    {
+        question : "Negara manakah yang mempunyai garis pantai terpanjang di dunia?",
+        choiceA : "Canada",
+        choiceB : "Amerika Serikat",
+        choiceC : "New Zealand",
+        choiceD : "Brazil",
+        correct : "A"
+    },
+    {
+        question : "Ibukota dari negara Libya adalah ….",
+        choiceA : "Kairo",
+        choiceB : "Djibouti",
+        choiceC : "Hokkaido",
+        choiceD : "Tripoli",
+        correct : "D"
     }
+    
 ];
 
 const lastQuestion = questions.length - 1;
 let runningQuestion = 0;
 let count = 0;
-const questionTime = 10; // 10s
+const questionTime = 10; // 10 detik
 const gaugeWidth = 150; // 150px
 const gaugeUnit = gaugeWidth / questionTime;
 let TIMER;
