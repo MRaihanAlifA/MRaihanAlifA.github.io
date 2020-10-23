@@ -94,10 +94,10 @@ let questions = [
 
 const lastQuestion = questions.length - 1;
 let runningQuestion = 0;
-let count = 0;
-const questionTime = 10; // 10 detik
+let count = 10;
+const questionTime = 0; // 10 detik
 const gaugeWidth = 150; // 150px
-const gaugeUnit = gaugeWidth / questionTime;
+const gaugeUnit = gaugeWidth / 10;
 let TIMER;
 let score = 0;
 // merender pertanyaan
@@ -128,12 +128,12 @@ function renderProgress(){
 }
 // munculkan counter waktu
 function renderCounter(){
-    if(count <= questionTime){
+    if(count >= questionTime){
         counter.innerHTML = count;
         timeGauge.style.width = count * gaugeUnit + "px";
-        count++
+        count--
     }else{
-        count = 0;
+        count = 10;
         // mengubah warna progress ke merah
         answerIsWrong();
         if(runningQuestion < lastQuestion){
@@ -156,7 +156,7 @@ function checkAnswer(answer){
         // ubah warna progress ke merah
         answerIsWrong();
     }
-    count = 0;
+    count = 10;
     if(runningQuestion < lastQuestion){
         runningQuestion++;
         renderQuestion();

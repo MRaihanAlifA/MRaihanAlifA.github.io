@@ -1,11 +1,11 @@
 body{
     font-size: 20px;
     font-family: monospace;
-    background-color: rgb(182, 18, 45);
+    background-color: rgb(211, 182, 162);
 }
 #container{
     margin : 150px auto;
-   background-color: #2f7ec4;
+   background-color: hsl(7, 18%, 36%);
     height: 300px;
     width : 700px;
     border-radius: 5px;
